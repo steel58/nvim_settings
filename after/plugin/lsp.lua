@@ -3,9 +3,13 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
+    'lua_ls',
     'clangd',
     'rust_analyzer',
     'pylsp',
+    'html',
+    'htmx',
+    'cssls',
 })
 
 -- Fix Undefined global 'vim'
