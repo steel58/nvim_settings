@@ -1,4 +1,4 @@
-require("nvim-treesitter.install").compilers = { "rust", "python", "c"}
+require("nvim-treesitter.install").compilers = { "clang", "rust",  "python"}
 require("nvim-treesitter.install").prefer_git = true
 require'nvim-treesitter.configs'.setup {
 	-- A list of parser names, or "all" (the five listed parsers should always be installed)

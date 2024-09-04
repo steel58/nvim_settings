@@ -10,6 +10,7 @@ lsp.ensure_installed({
     'html',
     'htmx',
     'cssls',
+    'java_language_server',
 })
 
 -- Fix Undefined global 'vim'
