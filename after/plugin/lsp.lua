@@ -11,6 +11,7 @@ lsp.ensure_installed({
     'htmx',
     'cssls',
     'jdtls',
+    'ltex',
 })
 
 -- Fix Undefined global 'vim'
