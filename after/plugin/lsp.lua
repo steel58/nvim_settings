@@ -12,6 +12,7 @@ lsp.ensure_installed({
     'cssls',
     'jdtls',
     'ltex',
+    'asm_lsp',
 })
 
 -- Fix Undefined global 'vim'
