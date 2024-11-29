@@ -12,7 +12,7 @@ lsp.ensure_installed({
     'cssls',
     'jdtls',
     'ltex',
-    'asm_lsp',
+    'dockerls',
 })
 
 -- Fix Undefined global 'vim'
