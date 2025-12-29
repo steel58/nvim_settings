@@ -1,3 +1,3 @@
 require("harper")
-vim.cmd("colorscheme kanagawa")
-
+require("lsp")
+require("config.lazy")
