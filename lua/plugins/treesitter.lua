@@ -1,3 +1,12 @@
+local function config()
+    vim.filetype.add({
+        extension = { zcml = 'zcml', },
+    })
+
+    vim.treesitter.language.register('xml', 'zcml')
+
+end
+
 return {
     'nvim-treesitter/nvim-treesitter',
     lazy = false,
@@ -39,5 +48,6 @@ return {
             "xml",
             "yaml",
         },
-    }
+    },
+    config = config,
 }
