@@ -4,6 +4,8 @@ local function config()
     vim.keymap.set('n', '<leader>ps', builtin.live_grep, { desc = 'Telescope live grep' })
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+    vim.keymap.set('n', '<leader>fs', builtin.current_buffer_fuzzy_find, { desc = 'Telescope search in current buffer' })
+    vim.keymap.set('n', '<leader>hh', builtin.keymaps, { desc = 'Telescope find keymaps' })
 
     local conf = require("telescope.config").values
 

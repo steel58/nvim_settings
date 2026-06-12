@@ -1,4 +1,5 @@
 require("lsp.lualsp")
+require("lsp.html")
 require("lsp.rust")
 require("lsp.python")
 require("lsp.clangd")
