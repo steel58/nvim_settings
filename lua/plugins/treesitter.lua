@@ -1,43 +1,23 @@
 return {
-    'nvim-treesitter/nvim-treesitter',
-    lazy = false,
-    build = ':TSUpdate',
-    opts = {
-        -- LazyVim config for treesitter
-        indent = { enable = true }, ---@type lazyvim.TSFeat
-        highlight = { enable = true }, ---@type lazyvim.TSFeat
-        folds = { enable = false }, ---@type lazyvim.TSFeat
-        ensure_installed = {
-            "bash",
-            "c",
-            "diff",
-            "go",
-            "gomod",
-            "gosum",
-            "gowork",
-            "html",
-            "javascript",
-            "jsdoc",
-            "json",
-            "jsonc",
-            "latex",
-            "lua",
-            "luadoc",
-            "luap",
-            "markdown",
-            "markdown_inline",
-            "printf",
-            "python",
-            "query",
-            "regex",
-            "rust",
-            "toml",
-            "tsx",
-            "typescript",
-            "vim",
-            "vimdoc",
-            "xml",
-            "yaml",
-        },
-    },
+  "romus204/tree-sitter-manager.nvim",
+  config = function()
+    require("tree-sitter-manager").setup({
+      ensure_installed = {
+        "go", "lua", "python", "xml", "bash",
+        "json", "yaml", "toml", "html", "markdown",
+        "rust",
+      },
+    })
+
+    vim.api.nvim_create_autocmd("FileType", {
+      callback = function()
+        pcall(vim.treesitter.start)
+        vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.wo[0][0].foldmethod = 'expr'
+      end,
+    })
+
+    vim.filetype.add({ extension = { zcml = "zcml" } })
+    vim.treesitter.language.register("xml", "zcml")
+  end,
 }

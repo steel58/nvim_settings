@@ -11,10 +11,14 @@ vim.lsp.config['lua_ls'] = {
   -- Example: https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json
   settings = {
     Lua = {
+      diagnostics = {
+          globals = {"vim"}
+      },
       runtime = {
         version = 'LuaJIT',
       }
     }
   }
 }
+
 vim.lsp.enable('lua_ls')
