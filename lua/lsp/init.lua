@@ -4,30 +4,31 @@ require("lsp.rust")
 require("lsp.python")
 require("lsp.clangd")
 require("lsp.java")
+require("lsp.javascript")
 require("lsp.go")
 
--- vim.keymap.set("n", "<leader>g[", function() vim.diagnostic.jump({
---         count=1,
---         wrap=true,
---     })
--- end)
--- vim.keymap.set("n", "<leader>g]", function() vim.diagnostic.jump({
---         count=-1,
---         wrap=true,
---     })
--- end)
--- vim.keymap.set("n", "g[", function() vim.diagnostic.jump({
---         count=1,
---         wrap=true,
---         severity=vim.diagnostic.severity.ERROR,
---     })
--- end)
--- vim.keymap.set("n", "g]", function() vim.diagnostic.jump({
---         count=-1,
---         wrap=true,
---         severity=vim.diagnostic.severity.ERROR,
---     })
--- end)
+vim.keymap.set("n", "<leader>g[", function() vim.diagnostic.jump({
+        count=1,
+        wrap=true,
+    })
+end)
+vim.keymap.set("n", "<leader>g]", function() vim.diagnostic.jump({
+        count=-1,
+        wrap=true,
+    })
+end)
+vim.keymap.set("n", "g[", function() vim.diagnostic.jump({
+        count=1,
+        wrap=true,
+        severity=vim.diagnostic.severity.ERROR,
+    })
+end)
+vim.keymap.set("n", "g]", function() vim.diagnostic.jump({
+        count=-1,
+        wrap=true,
+        severity=vim.diagnostic.severity.ERROR,
+    })
+end)
 
 vim.keymap.set("n", "ge", function() vim.diagnostic.setqflist({
     open=false,
