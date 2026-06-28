@@ -4,6 +4,7 @@ require("lsp.python")
 require("lsp.clangd")
 require("lsp.java")
 require("lsp.go")
+require("lsp.css")
 
 -- vim.keymap.set("n", "<leader>g[", function() vim.diagnostic.jump({
 --         count=1,
